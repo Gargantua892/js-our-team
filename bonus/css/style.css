@@ -1,0 +1,9 @@
+.team-member img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.team-member{
+    width: calc(100% / 3);
+    padding: 24px;
+}

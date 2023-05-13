@@ -46,18 +46,20 @@ for(let i = 0; i < teamArray.length; i++){
     let newElement = generateElement("div");
     newElement.classList.add("team-member");
     teamContainer.append(newElement);
+
+    let cardPhoto = generateElement("img");
+    newElement.append(cardPhoto);
     let cardHeading = generateElement("h2");
     newElement.append(cardHeading);
     let cardPosition = generateElement("h5");
     newElement.append(cardPosition);
-    let cardPhoto = generateElement("p");
-    newElement.append(cardPhoto);
+
 
 
     for (let key in varAppoggio){
         cardHeading.innerHTML = varAppoggio.nome;
         cardPosition.innerHTML = varAppoggio.ruolo;
-        cardPhoto.innerHTML = varAppoggio.immagine;
+        cardPhoto.setAttribute("src", `./img/${varAppoggio.immagine}`);
 }
 }
 
@@ -66,10 +68,3 @@ function generateElement(tagType){
     let newElement = document.createElement(tagType);
     return newElement;
 }
-
-
-
-	
-		
-		
-		
